@@ -5,10 +5,15 @@ function getComputerChoice() {
   // return choice based on random number
   switch(randomNumber) {
     case 0:
-      return "rock"
+      return "rock";
     case 1:
-      return "paper"
+      return "paper";
     case 2:
-      return "scissors"
+      return "scissors";
   }
+}
+
+function getHumanChoice() {
+  const humanChoice = prompt("Enter your choice 'rock, paper, or scissors': ").toLowerCase().trim();
+  return humanChoice;
 }
