@@ -21,3 +21,17 @@ function getHumanChoice() {
   const humanChoice = prompt("Enter your choice 'rock, paper, or scissors': ").toLowerCase().trim();
   return humanChoice;
 }
+
+function playRound(computerChoice, humanChoice) {
+  if (computerChoice === humanChoice){
+    console.log("Great minds think alike! No points awarded.")
+  } else if ((computerChoice === "rock" && humanChoice === "paper") || (computerChoice === "paper" && humanChoice === "scissors") || (computerChoice === "scissors" && humanChoice === "rock")){
+    console.log(`You won! ${humanChoice} beats ${computerChoice}.`)
+    humanScore++;
+  } else {
+    console.log(`You lost! ${computerChoice} beats ${humanChoice}.`)
+    computerScore++;
+  }
+}
+
+playRound(getComputerChoice(), getHumanChoice());
