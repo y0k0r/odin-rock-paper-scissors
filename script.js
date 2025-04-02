@@ -1,3 +1,28 @@
+const rockBtn = document.querySelector(".rockBtn");
+const paperBtn = document.querySelector(".paperBtn");
+const scissorsBtn = document.querySelector(".scissorsBtn");
+
+const results = document.querySelector(".results");
+const score = document.querySelector(".score");
+const winner = document.querySelector(".winner");
+
+
+rockBtn.addEventListener("click", () => {
+  playRound(getComputerChoice(), "rock")
+}); 
+
+paperBtn.addEventListener("click", () => {
+  playRound(getComputerChoice(), "paper")
+});
+
+scissorsBtn.addEventListener("click", () => {
+  playRound(getComputerChoice(), "scissors")
+});
+
+
+let humanScore = 0; 
+let computerScore = 0; 
+
 function getComputerChoice() {
   // generate random number between 0 and 2
   const randomNumber = Math.floor(Math.random() * 3); 
